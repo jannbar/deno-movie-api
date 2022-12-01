@@ -4,7 +4,7 @@ export function json(payload: any) {
     status: 200,
     headers: {
       "content-type": "application/json",
-      "cache-control": "max-age=604800",
+      "cache-control": "max-age=120",
     },
   })
 }

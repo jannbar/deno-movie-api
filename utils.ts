@@ -1,6 +1,6 @@
 // deno-lint-ignore no-explicit-any
 export function json(payload: any) {
-  return new Response(JSON.stringify(payload), {
+  return Response.json(payload, {
     status: 200,
     headers: {
       "content-type": "application/json",

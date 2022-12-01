@@ -1,3 +1,7 @@
+export async function getJSON(filepath: string) {
+  return JSON.parse(await Deno.readTextFile(filepath))
+}
+
 // deno-lint-ignore no-explicit-any
 export function json(payload: any) {
   return Response.json(payload, {

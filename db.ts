@@ -1,8 +1,6 @@
-async function getJSON(filepath: string) {
-  return JSON.parse(await Deno.readTextFile(filepath))
-}
+import { getJSON } from "./utils.ts"
 
-export type Movie = {
+type Movie = {
   id: number
   title: string
   year: string

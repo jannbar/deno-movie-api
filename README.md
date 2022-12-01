@@ -1,6 +1,6 @@
 # Deno Movie API
 
-A simple REST API that returns a bunch of movies. Written in Deno.
+A simple REST API that returns a bunch of movies. Built with Deno.
 
 ## Routes
 
@@ -11,4 +11,5 @@ A simple REST API that returns a bunch of movies. Written in Deno.
 
 ## Setup
 
-To run the API locally, clone this repository, `cd` into the directory and run `deno run --allow-net --allow-read main.ts`.
+To run the API on your machine, clone this repository, `cd` into the directory and run `deno task start`.
+For running the server in dev mode (with watcher enabled), run `deno task dev`.

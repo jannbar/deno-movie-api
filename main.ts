@@ -15,6 +15,11 @@ const routes = {
 function handler(req: Request) {
   const { pathname } = new URL(req.url)
 
+  // From "/", redirect to "/movies"
+  if (pathname === "/") {
+    return Response.redirect(req.url + "movies", 301)
+  }
+
   // All movies
   if (pathname === routes.movies) {
     const movies = getMovies()

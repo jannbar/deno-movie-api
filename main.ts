@@ -51,7 +51,12 @@ function handler(req: Request) {
     return json(movies)
   }
 
-  return new Response("invalid route", { status: 400 })
+  return new Response("invalid route", {
+    status: 400,
+    headers: {
+      "access-control-allow-origin": "*",
+    },
+  })
 }
 
 serve(handler)

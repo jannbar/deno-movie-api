@@ -9,6 +9,7 @@ export function json(payload: any) {
     headers: {
       "content-type": "application/json",
       "cache-control": "max-age=120",
+      "access-control-allow-origin": "*",
     },
   })
 }
@@ -16,5 +17,8 @@ export function json(payload: any) {
 export function notFound(msg?: string) {
   return new Response(msg, {
     status: 404,
+    headers: {
+      "access-control-allow-origin": "*",
+    },
   })
 }

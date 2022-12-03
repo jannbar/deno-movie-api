@@ -17,7 +17,13 @@ function handler(req: Request) {
 
   // From "/", redirect to "/movies"
   if (pathname === "/") {
-    return Response.redirect(req.url + "movies", 301)
+    return new Response(undefined, {
+      status: 301,
+      headers: {
+        "access-control-allow-origin": "*",
+        location: "/movies",
+      },
+    })
   }
 
   // All movies
